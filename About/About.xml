@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Enhanced Carrying Capacity</name>
+    <author>Designer225</author>
+    <url>www.anything.com</url>
+    <packageId>Designer225.EnhancedCarryingCapacity</packageId>
+    <supportedVersions>
+		  <li>1.4</li>
+    </supportedVersions>
+
+    <description>Configure carrying capacity, with Combat Extended compatibility.</description>
+
+    <loadAfter>
+        <li>CETeam.CombatExtended</li>
+    </loadAfter>
+</ModMetaData>

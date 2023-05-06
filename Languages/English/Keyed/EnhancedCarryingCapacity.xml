@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <EnhancedCarryingCapacity>Enhanced Carrying Capacity</EnhancedCarryingCapacity>
+
+    <EnhancedCarryingCapacity.MassMultiplier>Mass Multiplier</EnhancedCarryingCapacity.MassMultiplier>
+    <EnhancedCarryingCapacity.MassMultiplier.Tooltip>Modifies how much mass a pawn can carry. This is Carrying Capacity in vanilla and Weight in Combat Extended.</EnhancedCarryingCapacity.MassMultiplier.Tooltip>
+    <EnhancedCarryingCapacity.BulkMultiplier>Bulk Multiplier</EnhancedCarryingCapacity.BulkMultiplier>
+    <EnhancedCarryingCapacity.BulkMultiplier.Tooltip>Modifies how much bulk a pawn can carry, only in Combat Extended.</EnhancedCarryingCapacity.BulkMultiplier.Tooltip>
+
+    <StatsReport_MassModifier>Mass Modifier</StatsReport_MassModifier>
+    <StatsReport_BulkModifier>Bulk Modifier</StatsReport_BulkModifier>
+</LanguageData>
