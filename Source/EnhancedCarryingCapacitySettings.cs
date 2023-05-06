@@ -8,10 +8,12 @@ using Verse;
 
 namespace EnhancedCarryingCapacity
 {
-    internal sealed class EnhancedCarryingCapacitySettings : ModSettings
+    public sealed class EnhancedCarryingCapacitySettings : ModSettings
     {
-        public const float DefaultMassMultiplier = 1f; // carrying capacity (vanilla) OR weight (CE)
-        public const float DefaultBulkMultiplier = 1f; // bulk (CE)
+        private const float DefaultMassMultiplier = 1f; // carrying capacity (vanilla) OR weight (CE)
+        private const float DefaultMassOffset = 0f;
+        private const float DefaultBulkMultiplier = 1f; // bulk (CE)
+        private const float DefaultBulkOffset = 0f;
 
         private static EnhancedCarryingCapacitySettings instance;
         public static EnhancedCarryingCapacitySettings Instance
@@ -23,16 +25,26 @@ namespace EnhancedCarryingCapacity
             }
         }
 
+        private string m_massMultiplierBuffer, m_massOffsetBuffer, m_bulkMultiplierBuffer, m_bulkOffsetBuffer;
+
         private float m_massMultiplier = DefaultMassMultiplier;
         public float MassMultiplier => m_massMultiplier;
+
+        private float m_massOffset = DefaultMassOffset;
+        public float MassOffset => m_massOffset;
 
         private float m_bulkMultiplier = DefaultBulkMultiplier;
         public float BulkMultiplier => m_bulkMultiplier;
 
+        private float m_bulkOffset = DefaultBulkOffset;
+        public float BulkOffset => m_bulkOffset;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref m_massMultiplier, "MassMultiplier", DefaultMassMultiplier);
+            Scribe_Values.Look(ref m_massOffset, "MassOffset", DefaultMassOffset);
             Scribe_Values.Look(ref m_bulkMultiplier, "BulkMultiplier", DefaultBulkMultiplier);
+            Scribe_Values.Look(ref m_bulkOffset, "BulkOffset", DefaultBulkOffset);
             base.ExposeData();
         }
 
@@ -41,15 +53,18 @@ namespace EnhancedCarryingCapacity
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
-            m_massMultiplier = listingStandard.SliderLabeled(
-                "EnhancedCarryingCapacity.MassMultiplier".Translate(), m_massMultiplier,
-                0.1f, 10f, tooltip: "EnhancedCarryingCapacity.MassMultiplier.Tooltip".Translate());
+            listingStandard.Label("EnhancedCarryingCapacity.MassMultiplier".Translate(), tooltip: "EnhancedCarryingCapacity.MassMultiplier.Tooltip".Translate());
+            listingStandard.TextFieldNumeric(ref m_massMultiplier, ref m_massMultiplierBuffer);
+            listingStandard.Label("EnhancedCarryingCapacity.MassOffset".Translate(), tooltip: "EnhancedCarryingCapacity.MassOffset.Tooltip".Translate());
+            listingStandard.TextFieldNumeric(ref m_massOffset, ref m_massOffsetBuffer);
             if (EnhancedCarryingCapacity.Instance.CombatExtendedActive)
             {
-                m_bulkMultiplier = listingStandard.SliderLabeled(
-                    "EnhancedCarryingCapacity.BulkMultiplier".Translate(), m_bulkMultiplier,
-                    0.1f, 10f, tooltip: "EnhancedCarryingCapacity.BulkMultiplier.Tooltip".Translate());
+                listingStandard.Label("EnhancedCarryingCapacity.BulkMultiplier".Translate(), tooltip: "EnhancedCarryingCapacity.BulkMultiplier.Tooltip".Translate());
+                listingStandard.TextFieldNumeric(ref m_bulkMultiplier, ref m_bulkMultiplierBuffer);
+                listingStandard.Label("EnhancedCarryingCapacity.BulkOffset".Translate(), tooltip: "EnhancedCarryingCapacity.BulkOffset.Tooltip".Translate());
+                listingStandard.TextFieldNumeric(ref m_bulkOffset, ref m_bulkOffsetBuffer);
             }
+            listingStandard.End();
         }
     }
 }

@@ -3,7 +3,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/StatDef[defName="CarryingCapacity"]/parts</xpath>
         <value>
-            <li Class="StatPart_MassModifier" />
+            <li Class="EnhancedCarryingCapacity.StatPart_MassModifier" />
         </value>
     </Operation>
 
@@ -16,13 +16,13 @@
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/StatDef[defName="CarryWeight"]/parts</xpath>
                     <value>
-                        <li Class="StatPart_MassModifier" />
+                        <li Class="EnhancedCarryingCapacity.StatPart_MassModifier" />
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/StatDef[defName="CarryBulk"]/parts</xpath>
                     <value>
-                        <li Class="StatPart_BulkModifier" />
+                        <li Class="EnhancedCarryingCapacity.StatPart_BulkModifier" />
                     </value>
                 </li>
             </operations>

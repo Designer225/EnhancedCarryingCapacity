@@ -13,7 +13,7 @@ namespace EnhancedCarryingCapacity
 
         public EnhancedCarryingCapacity(ModContentPack content) : base(content) {
             Instance = this;
-            CombatExtendedActive = LoadedModManager.RunningMods.Any(x => x.PackageId == "CETeam.CombatExtended");
+            CombatExtendedActive = LoadedModManager.RunningMods.Any(x => x.PackageId.EqualsIgnoreCase("CETeam.CombatExtended"));
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
