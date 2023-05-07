@@ -6,6 +6,6 @@
         <li>CombatExtended</li>
     </loadAfter>
     <showCrossPromotions>true</showCrossPromotions>
-    <manifestUri>https://rawgit.com/FluffierThanThou/ModManager/master/About/Manifest.xml</manifestUri>
+    <manifestUri>https://github.com/Designer225/EnhancedCarryingCapacity/raw/main/About/Manifest.xml</manifestUri>
     <downloadUri>https://github.com/Designer225/EnhancedCarryingCapacity</downloadUri>
 </Manifest>
