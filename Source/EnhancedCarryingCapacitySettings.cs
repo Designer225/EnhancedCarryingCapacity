@@ -57,13 +57,10 @@ namespace EnhancedCarryingCapacity
             listingStandard.TextFieldNumeric(ref m_massMultiplier, ref m_massMultiplierBuffer);
             listingStandard.Label("EnhancedCarryingCapacity.MassOffset".Translate(), tooltip: "EnhancedCarryingCapacity.MassOffset.Tooltip".Translate());
             listingStandard.TextFieldNumeric(ref m_massOffset, ref m_massOffsetBuffer);
-            if (EnhancedCarryingCapacity.Instance.CombatExtendedActive)
-            {
-                listingStandard.Label("EnhancedCarryingCapacity.BulkMultiplier".Translate(), tooltip: "EnhancedCarryingCapacity.BulkMultiplier.Tooltip".Translate());
-                listingStandard.TextFieldNumeric(ref m_bulkMultiplier, ref m_bulkMultiplierBuffer);
-                listingStandard.Label("EnhancedCarryingCapacity.BulkOffset".Translate(), tooltip: "EnhancedCarryingCapacity.BulkOffset.Tooltip".Translate());
-                listingStandard.TextFieldNumeric(ref m_bulkOffset, ref m_bulkOffsetBuffer);
-            }
+            listingStandard.Label("EnhancedCarryingCapacity.BulkMultiplier".Translate(), tooltip: "EnhancedCarryingCapacity.BulkMultiplier.Tooltip".Translate());
+            listingStandard.TextFieldNumeric(ref m_bulkMultiplier, ref m_bulkMultiplierBuffer);
+            listingStandard.Label("EnhancedCarryingCapacity.BulkOffset".Translate(), tooltip: "EnhancedCarryingCapacity.BulkOffset.Tooltip".Translate());
+            listingStandard.TextFieldNumeric(ref m_bulkOffset, ref m_bulkOffsetBuffer);
             listingStandard.End();
         }
     }
