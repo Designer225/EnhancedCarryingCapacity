@@ -18,7 +18,8 @@ namespace EnhancedCarryingCapacity
 
         public override void TransformValue(StatRequest req, ref float val)
         {
-            val *= EnhancedCarryingCapacitySettings.Instance.MassMultiplier + EnhancedCarryingCapacitySettings.Instance.MassOffset;
+            val *= EnhancedCarryingCapacitySettings.Instance.MassMultiplier;
+            val += EnhancedCarryingCapacitySettings.Instance.MassOffset;
         }
     }
 
@@ -32,7 +33,8 @@ namespace EnhancedCarryingCapacity
 
         public override void TransformValue(StatRequest req, ref float val)
         {
-            val *= EnhancedCarryingCapacitySettings.Instance.BulkMultiplier + EnhancedCarryingCapacitySettings.Instance.BulkOffset;
+            val *= EnhancedCarryingCapacitySettings.Instance.BulkMultiplier;
+            val += EnhancedCarryingCapacitySettings.Instance.BulkOffset;
         }
     }
 }
