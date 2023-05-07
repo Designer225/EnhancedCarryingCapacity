@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3704" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
 
 </Project>

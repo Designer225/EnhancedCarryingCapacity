@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HarmonyLib;
+using System;
 using System.Linq;
 using UnityEngine;
 using Verse;
@@ -13,6 +14,7 @@ namespace EnhancedCarryingCapacity
 
         public EnhancedCarryingCapacity(ModContentPack content) : base(content) {
             Instance = this;
+            new Harmony("Designer225.EnhancedCarryingCapacity").PatchAll();
             CombatExtendedActive = LoadedModManager.RunningMods.Any(x => x.PackageId.EqualsIgnoreCase("CETeam.CombatExtended"));
         }
 
