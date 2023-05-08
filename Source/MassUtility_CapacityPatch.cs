@@ -9,6 +9,7 @@ namespace EnhancedCarryingCapacity
     {
         static bool Prepare()
         {
+            Log.Message("[EnhancedCarryingCapacity] Combat Extended active: " + EnhancedCarryingCapacity.Instance.CombatExtendedActive);
             return !EnhancedCarryingCapacity.Instance.CombatExtendedActive;
         }
 

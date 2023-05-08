@@ -14,8 +14,8 @@ namespace EnhancedCarryingCapacity
 
         public EnhancedCarryingCapacity(ModContentPack content) : base(content) {
             Instance = this;
-            new Harmony("Designer225.EnhancedCarryingCapacity").PatchAll();
             CombatExtendedActive = LoadedModManager.RunningMods.Any(x => x.PackageId.EqualsIgnoreCase("CETeam.CombatExtended"));
+            new Harmony("Designer225.EnhancedCarryingCapacity").PatchAll();
         }
 
         public override void DoSettingsWindowContents(Rect inRect)

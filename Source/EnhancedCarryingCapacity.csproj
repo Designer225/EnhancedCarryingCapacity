@@ -7,6 +7,8 @@
     <OutputPath>$(BaseOutputPath)</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <Version>1.0.1</Version>
+    <AssemblyVersion></AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
