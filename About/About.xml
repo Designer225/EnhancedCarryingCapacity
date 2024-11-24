@@ -5,7 +5,8 @@
     <url>https://github.com/Designer225/EnhancedCarryingCapacity</url>
     <packageId>Designer225.EnhancedCarryingCapacity</packageId>
     <supportedVersions>
-		  <li>1.4</li>
+        <li>1.4</li>
+        <li>1.5</li>
     </supportedVersions>
 
     <description>Configure carrying capacity, with Combat Extended compatibility.</description>
