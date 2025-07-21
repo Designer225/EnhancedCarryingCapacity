@@ -7,18 +7,22 @@
     <OutputPath>$(BaseOutputPath)</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <Version>1.0.2</Version>
-    <AssemblyVersion></AssemblyVersion>
+    <Version>1.0.3</Version>
     <Authors>Designer225</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\1.6\Assemblies\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\1.6\Assemblies\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4243" />
-    <PackageReference Include="Lib.Harmony" Version="2.3.3" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4523" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.6" />
   </ItemGroup>
 
 </Project>
